@@ -1,0 +1,15 @@
+{
+  "run": "results/20260916-001002",
+  "k": 6,
+  "h": 64,
+  "commit": "4329c2abefee86d34c29cbcffcf2c0f0bea5a900",
+  "uncommitted": [],
+  "versions": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "torch": "2.8.0",
+    "onnx": "1.16.2",
+    "onnxruntime": "1.19.2"
+  },
+  "exported": "2026-09-16T08:19:56+0900"
+}

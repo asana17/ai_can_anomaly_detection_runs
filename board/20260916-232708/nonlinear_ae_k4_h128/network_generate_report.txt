@@ -1,0 +1,208 @@
+ST Edge AI Core v4.0.1-20581 7ed50de05
+Created date          : 2026-09-16 23:28:42
+Parameters            : generate --target stm32h5 --model /Users/asana/ai_can_anomaly_detection_runs/quantize/20260916-221145/nonlinear_ae_k4_h128_float.onnx --workspace /var/folders/dl/k7cpp5fs5ylgl7w7lkwbhykm0000gn/T/tmp06emai36/workspace --output /var/folders/dl/k7cpp5fs5ylgl7w7lkwbhykm0000gn/T/tmp06emai36/output
+
+Exec/report summary (generate)
+-----------------------------------------------------------------------------------------------------------------------------
+model file         :   /Users/asana/ai_can_anomaly_detection_runs/quantize/20260916-221145/nonlinear_ae_k4_h128_float.onnx   
+type               :   onnx                                                                                                  
+c_name             :   network                                                                                               
+compression        :   lossless                                                                                              
+options            :   allocate-inputs, allocate-outputs, use-lite-runtime, use-st-ai                                        
+optimization       :   balanced                                                                                              
+target/series      :   stm32h5                                                                                               
+workspace dir      :   /var/folders/dl/k7cpp5fs5ylgl7w7lkwbhykm0000gn/T/tmp06emai36/workspace                                
+output dir         :   /var/folders/dl/k7cpp5fs5ylgl7w7lkwbhykm0000gn/T/tmp06emai36/output                                   
+model_fmt          :   float                                                                                                 
+model_name         :   nonlinear_ae_k4_h128_float                                                                            
+model_hash         :   0xf305ec89d17245e073bcddde9fa0b085                                                                    
+params #           :   5,653 items (22.08 KiB)                                                                               
+-----------------------------------------------------------------------------------------------------------------------------
+input 1/1          :   'row', f32(1x17), 68 Bytes, activations                                                               
+output 1/1         :   'out', f32(1x17), 68 Bytes, activations                                                               
+macc               :   5,909                                                                                                 
+weights (ro)       :   22,612 B (22.08 KiB) (1 segment)                                                                      
+activations (rw)   :   580 B (580 B) (1 segment) *                                                                           
+ram (total)        :   580 B (580 B) = 580 + 0 + 0                                                                           
+-----------------------------------------------------------------------------------------------------------------------------
+(*) 'input'/'output' buffers are allocated in the activations buffer
+
+Model name - nonlinear_ae_k4_h128_float
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+m_id   layer (type,original)                                 oshape         param/size       macc                     connected to   | c_size          c_macc            c_type             
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+1      encoder_0_weight (Placeholder, Gemm)                  [b:128,c:17]   2,176/8,704                                              | +512(+5.9%)     +2,304(+100.0%)   Dense_[0]          
+       encoder_0_bias (Placeholder, Gemm)                    [b:128]        128/512                                                  | -512(-100.0%)                     
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+3      encoder_2_weight (Placeholder, Gemm)                  [b:4,c:128]    512/2,048                                                | +16(+0.8%)      +516(+100.0%)     Dense_[2]          
+       encoder_2_bias (Placeholder, Gemm)                    [b:4]          4/16                                                     | -16(-100.0%)                      
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+4      decoder_0_weight (Placeholder, Gemm)                  [b:128,c:4]    512/2,048                                                | +512(+25.0%)    +640(+100.0%)     Dense_[3]          
+       decoder_0_bias (Placeholder, Gemm)                    [b:128]        128/512                                                  | -512(-100.0%)                     
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+6      decoder_2_weight (Placeholder, Gemm)                  [b:17,c:128]   2,176/8,704                                              | +68(+0.8%)      +2,193(+100.0%)   Dense_[o][5]       
+       decoder_2_bias (Placeholder, Gemm)                    [b:17]         17/68                                                    | -68(-100.0%)                      
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+0      row (Input, )                                         [b:1,c:17]                                                              |                                   
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+1      _encoder_encoder_0..m_output_0 (Gemm, Gemm)           [b:1,c:128]                    2,304                              row   |                 -2,304(-100.0%)   
+                                                                                                                  encoder_0_weight   | 
+                                                                                                                    encoder_0_bias   | 
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+2      _encoder_encoder_1..u_output_0 (Nonlinearity, Relu)   [b:1,c:128]                      128   _encoder_encoder_0..m_output_0   |                                   Nonlinearity_[1]   
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+3      _encoder_encoder_2..m_output_0 (Gemm, Gemm)           [b:1,c:4]                        516   _encoder_encoder_1..u_output_0   |                 -516(-100.0%)     
+                                                                                                                  encoder_2_weight   | 
+                                                                                                                    encoder_2_bias   | 
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+4      _decoder_decoder_0..m_output_0 (Gemm, Gemm)           [b:1,c:128]                      640   _encoder_encoder_2..m_output_0   |                 -640(-100.0%)     
+                                                                                                                  decoder_0_weight   | 
+                                                                                                                    decoder_0_bias   | 
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+5      _decoder_decoder_1..u_output_0 (Nonlinearity, Relu)   [b:1,c:128]                      128   _decoder_decoder_0..m_output_0   |                                   Nonlinearity_[4]   
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+6      out (Gemm, Gemm)                                      [b:1,c:17]                     2,193   _decoder_decoder_1..u_output_0   |                 -2,193(-100.0%)   
+                                                                                                                  decoder_2_weight   | 
+                                                                                                                    decoder_2_bias   | 
+------ ----------------------------------------------------- -------------- ------------- ------- -------------------------------- --- --------------- ----------------- ------------------ 
+model/c-model: macc=5,909/5,909  weights=22,612/22,612  activations=--/580 io=--/0
+
+
+
+Generated C-graph summary
+------------------------------------------------------------------------------------------------------------------------
+model name            : nonlinear_ae_k4_h128_float
+c-name                : network
+c-node #              : 6
+c-array #             : 15
+activations size      : 580 (1 segment)
+weights size          : 22612 (1 segment)
+macc                  : 5909
+inputs                : ['row_output']
+outputs               : ['out_output']
+
+C-Arrays (15)
+------ ------------------------------------------ ----------- ------------------------- ------------- --------- 
+c_id   name (*_array)                             item/size   domain/mem-pool           c-type        comment   
+------ ------------------------------------------ ----------- ------------------------- ------------- --------- 
+0      _decoder_decoder_0_Gemm_output_0_bias      128/512     weights/weights           const float             
+1      _decoder_decoder_0_Gemm_output_0_output    128/512     activations/**default**   float                   
+2      _decoder_decoder_0_Gemm_output_0_weights   512/2048    weights/weights           const float             
+3      _decoder_decoder_1_Relu_output_0_output    128/512     activations/**default**   float                   
+4      _encoder_encoder_0_Gemm_output_0_bias      128/512     weights/weights           const float             
+5      _encoder_encoder_0_Gemm_output_0_output    128/512     activations/**default**   float                   
+6      _encoder_encoder_0_Gemm_output_0_weights   2176/8704   weights/weights           const float             
+7      _encoder_encoder_1_Relu_output_0_output    128/512     activations/**default**   float                   
+8      _encoder_encoder_2_Gemm_output_0_bias      4/16        weights/weights           const float             
+9      _encoder_encoder_2_Gemm_output_0_output    4/16        activations/**default**   float                   
+10     _encoder_encoder_2_Gemm_output_0_weights   512/2048    weights/weights           const float             
+11     out_bias                                   17/68       weights/weights           const float             
+12     out_output                                 17/68       activations/**default**   float         /output   
+13     out_weights                                2176/8704   weights/weights           const float             
+14     row_output                                 17/68       activations/**default**   float         /input    
+------ ------------------------------------------ ----------- ------------------------- ------------- --------- 
+
+C-Layers (6)
+------ ---------------------------------- ---- --------------- ------ ------ --------------------------------------------- ------------------ 
+c_id   name (*_layer)                     id   layer_type      macc   rom    tensors                                       shape (array id)   
+------ ---------------------------------- ---- --------------- ------ ------ --------------------------------------------- ------------------ 
+0      _encoder_encoder_0_Gemm_output_0   1    Dense           2304   9216   I: row_output                                 f32(1x17) (14)     
+                                                                             W: _encoder_encoder_0_Gemm_output_0_weights   f32(128x17) (6)    
+                                                                             W: _encoder_encoder_0_Gemm_output_0_bias      f32(128) (4)       
+                                                                             O: _encoder_encoder_0_Gemm_output_0_output    f32(1x128) (5)     
+------ ---------------------------------- ---- --------------- ------ ------ --------------------------------------------- ------------------ 
+1      _encoder_encoder_1_Relu_output_0   2    Nonlinearity    128    0      I: _encoder_encoder_0_Gemm_output_0_output    f32(1x128) (5)     
+                                                                             O: _encoder_encoder_1_Relu_output_0_output    f32(1x128) (7)     
+------ ---------------------------------- ---- --------------- ------ ------ --------------------------------------------- ------------------ 
+2      _encoder_encoder_2_Gemm_output_0   3    Dense           516    2064   I: _encoder_encoder_1_Relu_output_0_output    f32(1x128) (7)     
+                                                                             W: _encoder_encoder_2_Gemm_output_0_weights   f32(4x128) (10)    
+                                                                             W: _encoder_encoder_2_Gemm_output_0_bias      f32(4) (8)         
+                                                                             O: _encoder_encoder_2_Gemm_output_0_output    f32(1x4) (9)       
+------ ---------------------------------- ---- --------------- ------ ------ --------------------------------------------- ------------------ 
+3      _decoder_decoder_0_Gemm_output_0   4    Dense           640    2560   I: _encoder_encoder_2_Gemm_output_0_output    f32(1x4) (9)       
+                                                                             W: _decoder_decoder_0_Gemm_output_0_weights   f32(128x4) (2)     
+                                                                             W: _decoder_decoder_0_Gemm_output_0_bias      f32(128) (0)       
+                                                                             O: _decoder_decoder_0_Gemm_output_0_output    f32(1x128) (1)     
+------ ---------------------------------- ---- --------------- ------ ------ --------------------------------------------- ------------------ 
+4      _decoder_decoder_1_Relu_output_0   5    Nonlinearity    128    0      I: _decoder_decoder_0_Gemm_output_0_output    f32(1x128) (1)     
+                                                                             O: _decoder_decoder_1_Relu_output_0_output    f32(1x128) (3)     
+------ ---------------------------------- ---- --------------- ------ ------ --------------------------------------------- ------------------ 
+5      out                                6    Dense           2193   8772   I: _decoder_decoder_1_Relu_output_0_output    f32(1x128) (3)     
+                                                                             W: out_weights                                f32(17x128) (13)   
+                                                                             W: out_bias                                   f32(17) (11)       
+                                                                             O: out_output                                 f32(1x17) (12)     
+------ ---------------------------------- ---- --------------- ------ ------ --------------------------------------------- ------------------ 
+
+
+
+Number of operations per c-layer
+------- ------ ------------------------------------------------ ------- -------------- 
+c_id    m_id   name (type)                                          #op           type 
+------- ------ ------------------------------------------------ ------- -------------- 
+0       1      _encoder_encoder_0..m_output_0 (Dense)             2,304   smul_f32_f32 
+1       2      _encoder_encoder_1..u_output_0 (Nonlinearity)        128     op_f32_f32 
+2       3      _encoder_encoder_2..m_output_0 (Dense)               516   smul_f32_f32 
+3       4      _decoder_decoder_0..m_output_0 (Dense)               640   smul_f32_f32 
+4       5      _decoder_decoder_1..u_output_0 (Nonlinearity)        128     op_f32_f32 
+5       6      out (Dense)                                        2,193   smul_f32_f32 
+------- ------ ------------------------------------------------ ------- -------------- 
+total                                                             5,909 
+
+Number of operation types
+---------------- ------- ----------- 
+operation type         #           % 
+---------------- ------- ----------- 
+smul_f32_f32       5,653       95.7% 
+op_f32_f32           256        4.3% 
+
+Complexity report (model)
+------ ---------------------------------- ------------------------- ------------------------- ------ 
+m_id   name                               c_macc                    c_rom                     c_id   
+------ ---------------------------------- ------------------------- ------------------------- ------ 
+1      encoder_0_weight                   ||||||||||||||||  39.0%   ||||||||||||||||  40.8%   [0]    
+3      encoder_2_weight                   ||||               8.7%   ||||               9.1%   [2]    
+4      decoder_0_weight                   |||||             10.8%   |||||             11.3%   [3]    
+6      decoder_2_weight                   |||||||||||||||   37.1%   |||||||||||||||   38.8%   [5]    
+2      _encoder_encoder_1_Relu_output_0   |                  2.2%   |                  0.0%   [1]    
+5      _decoder_decoder_1_Relu_output_0   |                  2.2%   |                  0.0%   [4]    
+------ ---------------------------------- ------------------------- ------------------------- ------ 
+macc=5,909 weights=22,612 act=580 ram_io=0
+ 
+ Requested memory size by section - "stm32h5" target
+ ------------------------------- ------- -------- ------ ----- 
+ module                             text   rodata   data   bss 
+ ------------------------------- ------- -------- ------ ----- 
+ network.o                         1,110       48      0     0 
+ NetworkRuntime1201_CM33_GCC.a       752        0      0     0 
+ lib (toolchain)*                      0        0      0     0 
+ ------------------------------- ------- -------- ------ ----- 
+ RT total**                        1,862       48      0     0 
+ ------------------------------- ------- -------- ------ ----- 
+ weights                               0   22,616      0     0 
+ activations                           0        0      0   580 
+ states                                0        0      0     0 
+ io                                    0        0      0     0 
+ ------------------------------- ------- -------- ------ ----- 
+ TOTAL                             1,862   22,664      0   580 
+ ------------------------------- ------- -------- ------ ----- 
+ *  toolchain objects (libm/libgcc*)
+ ** RT AI runtime objects (kernels+infrastructure)
+  
+  Summary - "stm32h5" target
+  -------------------------------------------------
+               FLASH (ro)     %*   RAM (rw)      % 
+  -------------------------------------------------
+  RT total          1,910   7.8%          0   0.0% 
+  -------------------------------------------------
+  TOTAL            24,526               580        
+  -------------------------------------------------
+  *  rt/total
+
+
+Generated files (5)
+--------------------------------------------------------------------------------------- 
+/var/folders/dl/k7cpp5fs5ylgl7w7lkwbhykm0000gn/T/tmp06emai36/output/network_data.h      
+/var/folders/dl/k7cpp5fs5ylgl7w7lkwbhykm0000gn/T/tmp06emai36/output/network_data.c      
+/var/folders/dl/k7cpp5fs5ylgl7w7lkwbhykm0000gn/T/tmp06emai36/output/network.h           
+/var/folders/dl/k7cpp5fs5ylgl7w7lkwbhykm0000gn/T/tmp06emai36/output/network.c           
+/var/folders/dl/k7cpp5fs5ylgl7w7lkwbhykm0000gn/T/tmp06emai36/output/network_details.h   

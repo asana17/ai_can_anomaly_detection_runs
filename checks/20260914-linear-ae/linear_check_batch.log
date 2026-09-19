@@ -1,0 +1,196 @@
+206849 calibration rows in 1293 stretches, the gap drops 118571 training rows
+train (1760019, 17), calibration (206227, 17), rows ready in 2s
+
+k=2 batch=256  13 of 500 epochs, stopped, 33s
+  losses: first 0.458896, last 5 0.424289 0.424287 0.424282 0.424284 0.424284
+  train MSE        pca 0.42422  ae 0.424241  ratio 1.0000
+  calibration MSE  pca 0.445667  ae 0.445696  ratio 1.0001
+  median row ratio 1.0014
+  threshold        pca 5.12262  ae 5.11293  ratio 0.9981
+
+k=2 batch=1024  14 of 500 epochs, stopped, 27s
+  losses: first 0.558188, last 5 0.424261 0.424261 0.424258 0.424265 0.424261
+  train MSE        pca 0.42422  ae 0.424256  ratio 1.0001
+  calibration MSE  pca 0.445667  ae 0.445709  ratio 1.0001
+  median row ratio 1.0040
+  threshold        pca 5.12262  ae 5.11145  ratio 0.9978
+
+k=2 batch=4096  17 of 500 epochs, stopped, 53s
+  losses: first 0.870677, last 5 0.424245 0.424242 0.424239 0.424242 0.424242
+  train MSE        pca 0.42422  ae 0.42424  ratio 1.0000
+  calibration MSE  pca 0.445667  ae 0.445709  ratio 1.0001
+  median row ratio 0.9982
+  threshold        pca 5.12262  ae 5.10176  ratio 0.9959
+
+k=4 batch=256  13 of 500 epochs, stopped, 32s
+  losses: first 0.220146, last 5 0.191726 0.19172 0.191719 0.191711 0.191719
+  train MSE        pca 0.191643  ae 0.19171  ratio 1.0004
+  calibration MSE  pca 0.197375  ae 0.197452  ratio 1.0004
+  median row ratio 0.9956
+  threshold        pca 2.41632  ae 2.40472  ratio 0.9952
+
+k=4 batch=1024  13 of 500 epochs, stopped, 26s
+  losses: first 0.299471, last 5 0.19169 0.191686 0.191689 0.191686 0.191694
+  train MSE        pca 0.191643  ae 0.191686  ratio 1.0002
+  calibration MSE  pca 0.197375  ae 0.197436  ratio 1.0003
+  median row ratio 0.9974
+  threshold        pca 2.41632  ae 2.42633  ratio 1.0041
+
+k=4 batch=4096  16 of 500 epochs, stopped, 53s
+  losses: first 0.588011, last 5 0.191665 0.191667 0.191666 0.191666 0.191665
+  train MSE        pca 0.191643  ae 0.191669  ratio 1.0001
+  calibration MSE  pca 0.197375  ae 0.197449  ratio 1.0004
+  median row ratio 1.0010
+  threshold        pca 2.41632  ae 2.41855  ratio 1.0009
+
+k=6 batch=256  13 of 500 epochs, stopped, 32s
+  losses: first 0.102467, last 5 0.0764175 0.076415 0.0764113 0.0764119 0.0764099
+  train MSE        pca 0.0763484  ae 0.0764214  ratio 1.0010
+  calibration MSE  pca 0.0805292  ae 0.08068  ratio 1.0019
+  median row ratio 0.9979
+  threshold        pca 1.52438  ae 1.52486  ratio 1.0003
+
+k=6 batch=1024  14 of 500 epochs, stopped, 27s
+  losses: first 0.17525, last 5 0.0763906 0.0763892 0.076387 0.076389 0.0763878
+  train MSE        pca 0.0763484  ae 0.0763696  ratio 1.0003
+  calibration MSE  pca 0.0805292  ae 0.0805544  ratio 1.0003
+  median row ratio 0.9974
+  threshold        pca 1.52438  ae 1.52344  ratio 0.9994
+
+k=6 batch=4096  17 of 500 epochs, stopped, 53s
+  losses: first 0.432826, last 5 0.0763674 0.0763681 0.0763675 0.076369 0.0763676
+  train MSE        pca 0.0763484  ae 0.0763637  ratio 1.0002
+  calibration MSE  pca 0.0805292  ae 0.080561  ratio 1.0004
+  median row ratio 0.9974
+  threshold        pca 1.52438  ae 1.5239  ratio 0.9997
+
+k=8 batch=256  13 of 500 epochs, stopped, 32s
+  losses: first 0.050059, last 5 0.027826 0.0278248 0.0278236 0.0278199 0.0278215
+  train MSE        pca 0.0277735  ae 0.0278137  ratio 1.0014
+  calibration MSE  pca 0.0287728  ae 0.028841  ratio 1.0024
+  median row ratio 1.0160
+  threshold        pca 0.617252  ae 0.612442  ratio 0.9922
+
+k=8 batch=1024  14 of 500 epochs, stopped, 27s
+  losses: first 0.112656, last 5 0.0278071 0.0278056 0.0278039 0.0278058 0.0278045
+  train MSE        pca 0.0277735  ae 0.0278098  ratio 1.0013
+  calibration MSE  pca 0.0287728  ae 0.0288379  ratio 1.0023
+  median row ratio 1.0035
+  threshold        pca 0.617252  ae 0.618504  ratio 1.0020
+
+k=8 batch=4096  17 of 500 epochs, stopped, 54s
+  losses: first 0.3353, last 5 0.0277882 0.0277885 0.0277883 0.0277895 0.02779
+  train MSE        pca 0.0277735  ae 0.0277885  ratio 1.0005
+  calibration MSE  pca 0.0287728  ae 0.0287729  ratio 1.0000
+  median row ratio 1.0055
+  threshold        pca 0.617252  ae 0.615099  ratio 0.9965
+
+k=10 batch=256  13 of 500 epochs, stopped, 33s
+  losses: first 0.031779, last 5 0.0117071 0.0117052 0.0117047 0.0117045 0.0117034
+  train MSE        pca 0.0116712  ae 0.0117086  ratio 1.0032
+  calibration MSE  pca 0.0119757  ae 0.0119951  ratio 1.0016
+  median row ratio 0.9998
+  threshold        pca 0.25269  ae 0.257411  ratio 1.0187
+
+k=10 batch=1024  14 of 500 epochs, stopped, 27s
+  losses: first 0.0875141, last 5 0.0116938 0.0116936 0.0116929 0.0116922 0.0116924
+  train MSE        pca 0.0116712  ae 0.0116881  ratio 1.0014
+  calibration MSE  pca 0.0119757  ae 0.0119943  ratio 1.0016
+  median row ratio 1.0108
+  threshold        pca 0.25269  ae 0.252333  ratio 0.9986
+
+k=10 batch=4096  19 of 500 epochs, stopped, 60s
+  losses: first 0.273645, last 5 0.0116826 0.0116826 0.0116817 0.0116825 0.0116831
+  train MSE        pca 0.0116712  ae 0.011679  ratio 1.0007
+  calibration MSE  pca 0.0119757  ae 0.0119827  ratio 1.0006
+  median row ratio 0.9994
+  threshold        pca 0.25269  ae 0.253255  ratio 1.0022
+
+k=12 batch=256  13 of 500 epochs, stopped, 32s
+  losses: first 0.028744, last 5 0.00418076 0.00418131 0.00418083 0.00418031 0.00417961
+  train MSE        pca 0.00416474  ae 0.00417761  ratio 1.0031
+  calibration MSE  pca 0.00429648  ae 0.00430858  ratio 1.0028
+  median row ratio 0.9761
+  threshold        pca 0.117898  ae 0.1192  ratio 1.0110
+
+k=12 batch=1024  15 of 500 epochs, stopped, 29s
+  losses: first 0.0941732, last 5 0.0041751 0.00417476 0.00417501 0.00417443 0.00417475
+  train MSE        pca 0.00416474  ae 0.00417184  ratio 1.0017
+  calibration MSE  pca 0.00429648  ae 0.00430205  ratio 1.0013
+  median row ratio 1.0237
+  threshold        pca 0.117898  ae 0.116185  ratio 0.9855
+
+k=12 batch=4096  20 of 500 epochs, stopped, 63s
+  losses: first 0.306187, last 5 0.00417098 0.0041701 0.00417002 0.00417032 0.00416945
+  train MSE        pca 0.00416474  ae 0.00416805  ratio 1.0008
+  calibration MSE  pca 0.00429648  ae 0.00430321  ratio 1.0016
+  median row ratio 0.9873
+  threshold        pca 0.117898  ae 0.117397  ratio 0.9958
+
+k=14 batch=256  13 of 500 epochs, stopped, 32s
+  losses: first 0.0195429, last 5 0.000365523 0.000365553 0.000365292 0.000365222 0.000365116
+  train MSE        pca 0.000361045  ae 0.00036456  ratio 1.0097
+  calibration MSE  pca 0.000368301  ae 0.000370147  ratio 1.0050
+  median row ratio 0.9674
+  threshold        pca 0.0232789  ae 0.0237378  ratio 1.0197
+
+k=14 batch=1024  15 of 500 epochs, stopped, 29s
+  losses: first 0.071021, last 5 0.00036379 0.000363992 0.000363893 0.000363961 0.000363653
+  train MSE        pca 0.000361045  ae 0.000364264  ratio 1.0089
+  calibration MSE  pca 0.000368301  ae 0.000372631  ratio 1.0118
+  median row ratio 1.0000
+  threshold        pca 0.0232789  ae 0.0231887  ratio 0.9961
+
+k=14 batch=4096  22 of 500 epochs, stopped, 71s
+  losses: first 0.241415, last 5 0.000362916 0.000362815 0.000362963 0.000362997 0.000362932
+  train MSE        pca 0.000361045  ae 0.000363278  ratio 1.0062
+  calibration MSE  pca 0.000368301  ae 0.000372068  ratio 1.0102
+  median row ratio 1.0311
+  threshold        pca 0.0232789  ae 0.0232369  ratio 0.9982
+
+k=16 batch=256  13 of 500 epochs, stopped, 33s
+  losses: first 0.0154029, last 5 1.14699e-06 1.18143e-06 1.17868e-06 1.12321e-06 1.14499e-06
+  train MSE        pca 5.42975e-07  ae 7.92136e-07  ratio 1.4589
+  calibration MSE  pca 5.59129e-07  ae 8.25453e-07  ratio 1.4763
+  median row ratio 3.3199
+  threshold        pca 3.9501e-05  ae 4.20306e-05  ratio 1.0640
+
+k=16 batch=1024  15 of 500 epochs, stopped, 29s
+  losses: first 0.0582877, last 5 2.93143e-06 2.55953e-06 2.17018e-06 1.79278e-06 1.48874e-06
+  train MSE        pca 5.42975e-07  ae 1.62416e-06  ratio 2.9912
+  calibration MSE  pca 5.59129e-07  ae 1.6396e-06  ratio 2.9324
+  median row ratio 10.3834
+  threshold        pca 3.9501e-05  ae 5.08134e-05  ratio 1.2864
+
+k=16 batch=4096  24 of 500 epochs, stopped, 76s
+  losses: first 0.204734, last 5 4.45964e-06 4.40326e-06 4.35568e-06 4.30876e-06 4.32063e-06
+  train MSE        pca 5.42975e-07  ae 4.31489e-06  ratio 7.9468
+  calibration MSE  pca 5.59129e-07  ae 4.21784e-06  ratio 7.5436
+  median row ratio 19.0211
+  threshold        pca 3.9501e-05  ae 0.000125403  ratio 3.1747
+
+  k  batch epochs  seconds  train ratio  cal ratio  cut ratio
+  2    256     13       33       1.0000     1.0001     0.9981
+  2   1024     14       27       1.0001     1.0001     0.9978
+  2   4096     17       53       1.0000     1.0001     0.9959
+  4    256     13       32       1.0004     1.0004     0.9952
+  4   1024     13       26       1.0002     1.0003     1.0041
+  4   4096     16       53       1.0001     1.0004     1.0009
+  6    256     13       32       1.0010     1.0019     1.0003
+  6   1024     14       27       1.0003     1.0003     0.9994
+  6   4096     17       53       1.0002     1.0004     0.9997
+  8    256     13       32       1.0014     1.0024     0.9922
+  8   1024     14       27       1.0013     1.0023     1.0020
+  8   4096     17       54       1.0005     1.0000     0.9965
+ 10    256     13       33       1.0032     1.0016     1.0187
+ 10   1024     14       27       1.0014     1.0016     0.9986
+ 10   4096     19       60       1.0007     1.0006     1.0022
+ 12    256     13       32       1.0031     1.0028     1.0110
+ 12   1024     15       29       1.0017     1.0013     0.9855
+ 12   4096     20       63       1.0008     1.0016     0.9958
+ 14    256     13       32       1.0097     1.0050     1.0197
+ 14   1024     15       29       1.0089     1.0118     0.9961
+ 14   4096     22       71       1.0062     1.0102     0.9982
+ 16    256     13       33       1.4589     1.4763     1.0640
+ 16   1024     15       29       2.9912     2.9324     1.2864
+ 16   4096     24       76       7.9468     7.5436     3.1747

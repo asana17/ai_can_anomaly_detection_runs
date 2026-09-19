@@ -1,0 +1,9 @@
+206849 calibration rows in 1293 stretches, the gap drops 118571 training rows
+train (1760019, 17), calibration (206227, 17), rows ready in 2s
+
+k=2  14 of 500 epochs, stopped, 29s
+  losses: first 0.558188, last 5 0.424261 0.424261 0.424258 0.424265 0.424261
+  train MSE        pca 0.42422  ae 0.424256  ratio 1.0001
+  calibration MSE  pca 0.445667  ae 0.445709  ratio 1.0001
+  median row ratio 1.0040
+  threshold        pca 5.12262  ae 5.11145  ratio 0.9978

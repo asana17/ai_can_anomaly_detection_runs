@@ -1,0 +1,751 @@
+{
+  "commit": "5f6f43623cc04d253bd3709fb839676f89e5c0c3",
+  "uncommitted": [],
+  "seeds": {
+    "SEED": 0,
+    "TORCH_SEED": 3
+  },
+  "hyperparameters": {
+    "MIN_SPEED": 5.0,
+    "TRAIN": 0.75,
+    "CALIBRATION": 0.1,
+    "BLOCK": 20.0,
+    "GAP": 5.0,
+    "DONORS": 24,
+    "COMPONENTS": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "TARGET": 0.001,
+    "MOVED": 1.0,
+    "HOLD": [
+      1,
+      10
+    ],
+    "EPOCHS": 1000,
+    "BATCH": 1024,
+    "RATE": 0.001,
+    "IMPROVEMENT": 0.0001,
+    "PATIENCE": 10,
+    "HIDDEN": [
+      32,
+      64,
+      128
+    ],
+    "logs": 11194
+  },
+  "metrics": {
+    "hours": 17.457900017499924,
+    "attacks_scored": 862,
+    "thresholds": [
+      {
+        "detector": "+ pca k=2",
+        "threshold": 9.33191204071045,
+        "on_clean_test": 0.0007203279085629777,
+        "epochs": null
+      },
+      {
+        "detector": "+ linear ae k=2",
+        "threshold": 5.118178844451904,
+        "on_clean_test": 0.0007219215543783825,
+        "epochs": 15
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=2",
+        "threshold": 2.274972915649414,
+        "on_clean_test": 0.0014151574840794783,
+        "epochs": 318
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=2",
+        "threshold": 2.6045026779174805,
+        "on_clean_test": 0.0008541941570569824,
+        "epochs": 344
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=2",
+        "threshold": 2.4944474697113037,
+        "on_clean_test": 0.0010247142593052979,
+        "epochs": 457
+      },
+      {
+        "detector": "+ pca k=4",
+        "threshold": 6.4091715812683105,
+        "on_clean_test": 0.000305979996557725,
+        "epochs": null
+      },
+      {
+        "detector": "+ linear ae k=4",
+        "threshold": 2.3989269733428955,
+        "on_clean_test": 0.0004223161410822767,
+        "epochs": 14
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=4",
+        "threshold": 0.7886680960655212,
+        "on_clean_test": 0.0005354649939760188,
+        "epochs": 296
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=4",
+        "threshold": 0.5841319561004639,
+        "on_clean_test": 0.000849413219610768,
+        "epochs": 679
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=4",
+        "threshold": 0.5694940090179443,
+        "on_clean_test": 0.0010008095720742257,
+        "epochs": 334
+      },
+      {
+        "detector": "+ pca k=6",
+        "threshold": 5.09062385559082,
+        "on_clean_test": 0.000902003531519127,
+        "epochs": null
+      },
+      {
+        "detector": "+ linear ae k=6",
+        "threshold": 1.5281050205230713,
+        "on_clean_test": 0.0009035971773345317,
+        "epochs": 22
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=6",
+        "threshold": 0.28642138838768005,
+        "on_clean_test": 0.0005896489516997826,
+        "epochs": 440
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=6",
+        "threshold": 0.18848058581352234,
+        "on_clean_test": 0.0006422392636081416,
+        "epochs": 608
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=6",
+        "threshold": 0.1583314836025238,
+        "on_clean_test": 0.000603991764038426,
+        "epochs": 562
+      },
+      {
+        "detector": "+ pca k=8",
+        "threshold": 3.239335060119629,
+        "on_clean_test": 0.0006693312424700236,
+        "epochs": null
+      },
+      {
+        "detector": "+ linear ae k=8",
+        "threshold": 0.6230601072311401,
+        "on_clean_test": 0.0007012041587781199,
+        "epochs": 24
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=8",
+        "threshold": 0.04796160012483597,
+        "on_clean_test": 0.0020000254983330466,
+        "epochs": 449
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=8",
+        "threshold": 0.03517521545290947,
+        "on_clean_test": 0.0007936356160715993,
+        "epochs": 650
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=8",
+        "threshold": 0.027898592874407768,
+        "on_clean_test": 0.0009769048848431534,
+        "epochs": 348
+      },
+      {
+        "detector": "+ pca k=10",
+        "threshold": 2.0726144313812256,
+        "on_clean_test": 0.0013673481096173339,
+        "epochs": null
+      },
+      {
+        "detector": "+ linear ae k=10",
+        "threshold": 0.25485512614250183,
+        "on_clean_test": 0.0013163514435243797,
+        "epochs": 47
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=10",
+        "threshold": 0.042840395122766495,
+        "on_clean_test": 0.0004525954115749683,
+        "epochs": 481
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=10",
+        "threshold": 0.01604504883289337,
+        "on_clean_test": 0.0006900486380702861,
+        "epochs": 659
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=10",
+        "threshold": 0.01196376234292984,
+        "on_clean_test": 0.0006008044724076163,
+        "epochs": 453
+      },
+      {
+        "detector": "+ pca k=12",
+        "threshold": 1.41571843624115,
+        "on_clean_test": 0.014457554837352508,
+        "epochs": null
+      },
+      {
+        "detector": "+ linear ae k=12",
+        "threshold": 0.12048878520727158,
+        "on_clean_test": 0.013918902551745679,
+        "epochs": 38
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=12",
+        "threshold": 0.008621437475085258,
+        "on_clean_test": 0.000734670720901621,
+        "epochs": 534
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=12",
+        "threshold": 0.0022070652339607477,
+        "on_clean_test": 0.0005800870768073537,
+        "epochs": 727
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=12",
+        "threshold": 0.0017945297295227647,
+        "on_clean_test": 0.0006518011385005705,
+        "epochs": 358
+      },
+      {
+        "detector": "+ pca k=14",
+        "threshold": 0.6290799975395203,
+        "on_clean_test": 0.0009641557183199148,
+        "epochs": null
+      },
+      {
+        "detector": "+ linear ae k=14",
+        "threshold": 0.023676389828324318,
+        "on_clean_test": 0.0009514065517966763,
+        "epochs": 65
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=14",
+        "threshold": 0.00021477254631463438,
+        "on_clean_test": 0.0015713347739891505,
+        "epochs": 214
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=14",
+        "threshold": 0.00016791974485386163,
+        "on_clean_test": 0.002156202788242719,
+        "epochs": 406
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=14",
+        "threshold": 0.0001742303284117952,
+        "on_clean_test": 0.0013067895686319506,
+        "epochs": 182
+      },
+      {
+        "detector": "+ pca k=16",
+        "threshold": 0.025913653895258904,
+        "on_clean_test": 0.0007537944706864788,
+        "epochs": null
+      },
+      {
+        "detector": "+ linear ae k=16",
+        "threshold": 3.9573405956616625e-05,
+        "on_clean_test": 0.0007665436372097175,
+        "epochs": 79
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=16",
+        "threshold": 0.00016605787095613778,
+        "on_clean_test": 0.001225513632046305,
+        "epochs": 108
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=16",
+        "threshold": 8.629096555523574e-05,
+        "on_clean_test": 0.0011298948831220158,
+        "epochs": 178
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=16",
+        "threshold": 8.058304229052737e-05,
+        "on_clean_test": 0.001058180821428799,
+        "epochs": 153
+      }
+    ],
+    "detection": [
+      {
+        "detector": "rules",
+        "found": {
+          "1": 448,
+          "10": 373
+        },
+        "alarms_per_hour": {
+          "1": 34.42567544765139,
+          "10": 0.17184197394834308
+        }
+      },
+      {
+        "detector": "+ pca k=2",
+        "found": {
+          "1": 450,
+          "10": 374
+        },
+        "alarms_per_hour": {
+          "1": 39.75277664005003,
+          "10": 0.9164905277244964
+        }
+      },
+      {
+        "detector": "+ linear ae k=2",
+        "found": {
+          "1": 450,
+          "10": 374
+        },
+        "alarms_per_hour": {
+          "1": 39.58093466610169,
+          "10": 0.9164905277244964
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=2",
+        "found": {
+          "1": 482,
+          "10": 389
+        },
+        "alarms_per_hour": {
+          "1": 49.03224323326056,
+          "10": 1.2028938176384014
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=2",
+        "found": {
+          "1": 465,
+          "10": 379
+        },
+        "alarms_per_hour": {
+          "1": 43.59058072489636,
+          "10": 0.5155259218450292
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=2",
+        "found": {
+          "1": 472,
+          "10": 387
+        },
+        "alarms_per_hour": {
+          "1": 45.42356178034535,
+          "10": 0.9164905277244964
+        }
+      },
+      {
+        "detector": "+ pca k=4",
+        "found": {
+          "1": 452,
+          "10": 374
+        },
+        "alarms_per_hour": {
+          "1": 37.34698900477323,
+          "10": 0.2291226319311241
+        }
+      },
+      {
+        "detector": "+ linear ae k=4",
+        "found": {
+          "1": 453,
+          "10": 374
+        },
+        "alarms_per_hour": {
+          "1": 38.89356677030832,
+          "10": 0.2864032899139051
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=4",
+        "found": {
+          "1": 521,
+          "10": 418
+        },
+        "alarms_per_hour": {
+          "1": 46.34005230806985,
+          "10": 0.2864032899139051
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=4",
+        "found": {
+          "1": 555,
+          "10": 455
+        },
+        "alarms_per_hour": {
+          "1": 51.38075021055458,
+          "10": 0.4582452638622482
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=4",
+        "found": {
+          "1": 558,
+          "10": 448
+        },
+        "alarms_per_hour": {
+          "1": 54.416625083641975,
+          "10": 0.34368394789668616
+        }
+      },
+      {
+        "detector": "+ pca k=6",
+        "found": {
+          "1": 458,
+          "10": 380
+        },
+        "alarms_per_hour": {
+          "1": 44.90803585850033,
+          "10": 0.4009646058794672
+        }
+      },
+      {
+        "detector": "+ linear ae k=6",
+        "found": {
+          "1": 458,
+          "10": 379
+        },
+        "alarms_per_hour": {
+          "1": 44.90803585850033,
+          "10": 0.4009646058794672
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=6",
+        "found": {
+          "1": 574,
+          "10": 478
+        },
+        "alarms_per_hour": {
+          "1": 43.361458092965236,
+          "10": 0.2864032899139051
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=6",
+        "found": {
+          "1": 630,
+          "10": 521
+        },
+        "alarms_per_hour": {
+          "1": 46.855578229914876,
+          "10": 0.2864032899139051
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=6",
+        "found": {
+          "1": 637,
+          "10": 531
+        },
+        "alarms_per_hour": {
+          "1": 48.17303336351884,
+          "10": 0.2291226319311241
+        }
+      },
+      {
+        "detector": "+ pca k=8",
+        "found": {
+          "1": 496,
+          "10": 414
+        },
+        "alarms_per_hour": {
+          "1": 39.69549598206725,
+          "10": 0.8019292117589344
+        }
+      },
+      {
+        "detector": "+ linear ae k=8",
+        "found": {
+          "1": 496,
+          "10": 414
+        },
+        "alarms_per_hour": {
+          "1": 39.81005729803281,
+          "10": 0.9164905277244964
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=8",
+        "found": {
+          "1": 670,
+          "10": 574
+        },
+        "alarms_per_hour": {
+          "1": 53.15645060802079,
+          "10": 1.4892971075523067
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=8",
+        "found": {
+          "1": 727,
+          "10": 643
+        },
+        "alarms_per_hour": {
+          "1": 51.208908236606234,
+          "10": 0.34368394789668616
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=8",
+        "found": {
+          "1": 741,
+          "10": 662
+        },
+        "alarms_per_hour": {
+          "1": 54.531186399607535,
+          "10": 0.4009646058794672
+        }
+      },
+      {
+        "detector": "+ pca k=10",
+        "found": {
+          "1": 570,
+          "10": 464
+        },
+        "alarms_per_hour": {
+          "1": 46.741016913949316,
+          "10": 0.9737711857072774
+        }
+      },
+      {
+        "detector": "+ linear ae k=10",
+        "found": {
+          "1": 569,
+          "10": 464
+        },
+        "alarms_per_hour": {
+          "1": 46.97013954588044,
+          "10": 0.9164905277244964
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=10",
+        "found": {
+          "1": 653,
+          "10": 549
+        },
+        "alarms_per_hour": {
+          "1": 41.757599669447366,
+          "10": 0.4009646058794672
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=10",
+        "found": {
+          "1": 685,
+          "10": 602
+        },
+        "alarms_per_hour": {
+          "1": 52.98460863407245,
+          "10": 0.2291226319311241
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=10",
+        "found": {
+          "1": 671,
+          "10": 603
+        },
+        "alarms_per_hour": {
+          "1": 51.094346920640675,
+          "10": 0.17184197394834308
+        }
+      },
+      {
+        "detector": "+ pca k=12",
+        "found": {
+          "1": 646,
+          "10": 544
+        },
+        "alarms_per_hour": {
+          "1": 56.020483507159845,
+          "10": 6.1863110621403505
+        }
+      },
+      {
+        "detector": "+ linear ae k=12",
+        "found": {
+          "1": 644,
+          "10": 540
+        },
+        "alarms_per_hour": {
+          "1": 51.95355679038239,
+          "10": 6.071749746174788
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=12",
+        "found": {
+          "1": 620,
+          "10": 507
+        },
+        "alarms_per_hour": {
+          "1": 50.46425968283008,
+          "10": 0.4009646058794672
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=12",
+        "found": {
+          "1": 689,
+          "10": 586
+        },
+        "alarms_per_hour": {
+          "1": 50.57882099879564,
+          "10": 0.34368394789668616
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=12",
+        "found": {
+          "1": 708,
+          "10": 607
+        },
+        "alarms_per_hour": {
+          "1": 53.4428538979347,
+          "10": 0.2291226319311241
+        }
+      },
+      {
+        "detector": "+ pca k=14",
+        "found": {
+          "1": 636,
+          "10": 534
+        },
+        "alarms_per_hour": {
+          "1": 46.741016913949316,
+          "10": 0.8592098697417154
+        }
+      },
+      {
+        "detector": "+ linear ae k=14",
+        "found": {
+          "1": 635,
+          "10": 534
+        },
+        "alarms_per_hour": {
+          "1": 46.51189428201819,
+          "10": 0.8019292117589344
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=14",
+        "found": {
+          "1": 701,
+          "10": 592
+        },
+        "alarms_per_hour": {
+          "1": 66.33100194406043,
+          "10": 0.7446485537761534
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=14",
+        "found": {
+          "1": 741,
+          "10": 649
+        },
+        "alarms_per_hour": {
+          "1": 68.50766694740611,
+          "10": 1.3174551336039635
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=14",
+        "found": {
+          "1": 712,
+          "10": 622
+        },
+        "alarms_per_hour": {
+          "1": 61.290304041575695,
+          "10": 0.4582452638622482
+        }
+      },
+      {
+        "detector": "+ pca k=16",
+        "found": {
+          "1": 458,
+          "10": 374
+        },
+        "alarms_per_hour": {
+          "1": 58.42627114243665,
+          "10": 0.2291226319311241
+        }
+      },
+      {
+        "detector": "+ linear ae k=16",
+        "found": {
+          "1": 458,
+          "10": 375
+        },
+        "alarms_per_hour": {
+          "1": 58.88451640629889,
+          "10": 0.2291226319311241
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=32 k=16",
+        "found": {
+          "1": 726,
+          "10": 619
+        },
+        "alarms_per_hour": {
+          "1": 63.58153036088694,
+          "10": 0.4009646058794672
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=64 k=16",
+        "found": {
+          "1": 728,
+          "10": 629
+        },
+        "alarms_per_hour": {
+          "1": 62.4931978592141,
+          "10": 0.4582452638622482
+        }
+      },
+      {
+        "detector": "+ nonlinear ae h=128 k=16",
+        "found": {
+          "1": 651,
+          "10": 522
+        },
+        "alarms_per_hour": {
+          "1": 61.74854930543795,
+          "10": 0.4009646058794672
+        }
+      }
+    ]
+  },
+  "versions": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "torch": "2.8.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "started": "2026-09-19T02:52:03+0900",
+  "finished": "2026-09-19T09:32:56+0900",
+  "seconds": 24053
+}

@@ -8,7 +8,6 @@ datasets:
 Runs of the detector comparison in
 [asana17/ai_can_anomaly_detection](https://github.com/asana17/ai_can_anomaly_detection),
 and the models quantized from them and the C code generated from those for the board.
-Every directory is added by the script that made it, and none is written to again.
 
 | directory | added by | described in |
 |---|---|---|

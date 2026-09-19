@@ -1,0 +1,24 @@
+# What quantize.export printed, saved by hand from out/export_all_run1_quantize.log and added here on 2026-09-20.
+# The script did not write this file.
+
+206849 calibration rows in 1293 stretches, the gap drops 118571 training rows
+/Users/asana/ai_can_detection/quantize/export.py:85: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter will be the default. To switch now, set dynamo=True in torch.onnx.export. This new exporter supports features like exporting LLMs with DynamicCache. We encourage you to try it and share feedback to help improve the experience. Learn more about the new export logic: https://pytorch.org/docs/stable/onnx_dynamo.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html.
+  torch.onnx.export(model, torch.zeros(1, rows.shape[1]), float_path, dynamo=False,
+       14.14 real        36.86 user         0.38 sys
+          1976745984  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              157867  page reclaims
+                 130  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                  25  messages sent
+                  30  messages received
+                   0  signals received
+                 148  voluntary context switches
+                7718  involuntary context switches
+        685180645930  instructions retired
+        132511267978  cycles elapsed
+          1915127680  peak memory footprint

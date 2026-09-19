@@ -1,0 +1,74 @@
+# What evaluate.quantize.compare printed for this export, saved by hand from out/compare_all_run1_quantize.log and added here on 2026-09-20.
+# The script did not write this file.
+
+206849 calibration rows in 1293 stretches, the gap drops 118571 training rows
+206227 calibration rows, 862 attacks scored in 17.5 hours
+
+quantize/20260916-221145, results/20260916-001002
+       model  source     threshold   found in 1  found in 10     alarms/h 1   alarms/h 10
+    k=2 h=32   torch       2.31778      488/862      394/862           44.3           0.6
+    k=2 h=32    int8       4.19706      475/862      380/862           53.3           0.2
+    k=2 h=64   torch       2.36104      480/862      390/862           44.9           0.5
+    k=2 h=64    int8       3.03061      478/862      381/862           52.5           0.4
+   k=2 h=128   torch       2.25355      474/862      388/862           44.1           0.6
+   k=2 h=128    int8       3.40605      483/862      377/862           58.0           0.3
+    k=4 h=32   torch      0.742422      512/862      413/862           47.9           0.3
+    k=4 h=32    int8       1.28722      501/862      392/862           64.6           0.2
+    k=4 h=64   torch      0.719221      540/862      440/862           51.3           0.5
+    k=4 h=64    int8       3.83418      467/862      376/862           57.9           0.2
+   k=4 h=128   torch      0.541297      562/862      452/862           53.3           0.3
+   k=4 h=128    int8       3.45551      454/862      373/862           43.8           0.7
+    k=6 h=32   torch      0.242289      592/862      486/862           47.6           0.5
+    k=6 h=32    int8      0.302905      582/862      469/862           48.8           0.2
+    k=6 h=64   torch      0.163445      637/862      530/862           44.9           0.6
+    k=6 h=64    int8      0.328649      583/862      466/862           49.9           0.2
+   k=6 h=128   torch      0.157038      627/862      531/862           46.0           0.3
+   k=6 h=128    int8      0.206131      628/862      507/862           47.3           0.3
+    k=8 h=32   torch     0.0750598      659/862      544/862           44.7           0.3
+    k=8 h=32    int8     0.0816887      665/862      533/862           45.8           0.3
+    k=8 h=64   torch     0.0416793      677/862      582/862           49.5           0.3
+    k=8 h=64    int8     0.0513921      684/862      572/862           53.3           0.3
+   k=8 h=128   torch      0.025155      748/862      673/862           56.9           0.5
+   k=8 h=128    int8     0.0312421      752/862      669/862           56.5           0.6
+   k=10 h=32   torch     0.0252666      686/862      596/862           51.3           0.2
+   k=10 h=32    int8     0.0385444      700/862      573/862           52.6           0.2
+   k=10 h=64   torch     0.0173544      706/862      619/862           51.9           0.3
+   k=10 h=64    int8     0.0339411      684/862      573/862           61.8           0.8
+  k=10 h=128   torch     0.0116674      716/862      626/862           52.0           0.2
+  k=10 h=128    int8     0.0173599      717/862      614/862           51.6           0.2
+   k=12 h=32   torch     0.0132703      670/862      546/862           50.8           0.2
+   k=12 h=32    int8     0.0235638      688/862      523/862           54.2           0.2
+   k=12 h=64   torch    0.00443183      636/862      530/862           52.0           0.2
+   k=12 h=64    int8    0.00972391      644/862      508/862           55.4           0.2
+  k=12 h=128   torch    0.00156856      692/862      589/862           50.6           0.5
+  k=12 h=128    int8    0.00889354      643/862      516/862           67.1           0.2
+   k=14 h=32   torch   0.000195394      683/862      573/862           63.9           1.0
+   k=14 h=32    int8     0.0219332      579/862      439/862           58.8           0.2
+   k=14 h=64   torch   0.000290325      736/862      638/862           55.6           0.4
+   k=14 h=64    int8    0.00960079      671/862      529/862           67.2           0.3
+  k=14 h=128   torch   0.000187746      703/862      599/862           58.5           0.5
+  k=14 h=128    int8    0.00595752      649/862      501/862           80.1           0.2
+   k=16 h=32   torch   0.000153236      723/862      623/862           63.3           0.3
+   k=16 h=32    int8    0.00656528      660/862      497/862           71.8           0.2
+   k=16 h=64   torch   0.000148013      725/862      605/862           67.6           0.5
+   k=16 h=64    int8    0.00766309      630/862      460/862           70.7           0.2
+  k=16 h=128   torch   9.60747e-05      646/862      534/862           58.2           0.5
+  k=16 h=128    int8    0.00474523      563/862      398/862           76.1           0.2
+       58.24 real        87.62 user         3.43 sys
+          6681100288  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1284164  page reclaims
+                  20  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  39  voluntary context switches
+               36921  involuntary context switches
+       1755985120412  instructions retired
+        347908990202  cycles elapsed
+          7166989952  peak memory footprint

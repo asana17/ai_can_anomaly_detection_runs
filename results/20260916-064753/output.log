@@ -1,0 +1,125 @@
+# What evaluate.pc.run printed, saved by hand from out/full_run_pc_2.log and added here on 2026-09-20.
+# The script did not write this file.
+
+6585 train and 4609 test logs, 206977s and 69031s above the minimum speed
+206849 calibration rows in 1293 stretches, the gap drops 118571 training rows
+grid reused, train (3538312, 17)
+attack set reused, 3975 attacks
+moving rows: train 1760019, calibration 206227, test 689738. 862 attacks reach a moving row and moved it
+
+17.5 hours above MIN_SPEED with no attack in them
+
+                 detector   threshold  on clean test  epochs
+/Users/asana/ai_can_detection/models/pca.py:30: RuntimeWarning: divide by zero encountered in matmul
+  projected = (centred @ space.basis) @ space.basis.T
+/Users/asana/ai_can_detection/models/pca.py:30: RuntimeWarning: overflow encountered in matmul
+  projected = (centred @ space.basis) @ space.basis.T
+/Users/asana/ai_can_detection/models/pca.py:30: RuntimeWarning: invalid value encountered in matmul
+  projected = (centred @ space.basis) @ space.basis.T
+                + pca k=2       9.332        0.00072        
+          + linear ae k=2       5.112        0.00073      14
+  + nonlinear ae h=32 k=2       2.399        0.00107     595
+  + nonlinear ae h=64 k=2       2.366        0.00078     538
+ + nonlinear ae h=128 k=2       2.102        0.00121     625
+/Users/asana/ai_can_detection/models/pca.py:30: RuntimeWarning: divide by zero encountered in matmul
+  projected = (centred @ space.basis) @ space.basis.T
+/Users/asana/ai_can_detection/models/pca.py:30: RuntimeWarning: overflow encountered in matmul
+  projected = (centred @ space.basis) @ space.basis.T
+/Users/asana/ai_can_detection/models/pca.py:30: RuntimeWarning: invalid value encountered in matmul
+  projected = (centred @ space.basis) @ space.basis.T
+                + pca k=4       6.409        0.00031        
+          + linear ae k=4       2.447        0.00029      14
+  + nonlinear ae h=32 k=4      0.7063        0.00066     458
+  + nonlinear ae h=64 k=4      0.6531        0.00085     423
+ + nonlinear ae h=128 k=4      0.5193        0.00091     441
+                + pca k=6       5.091        0.00090        
+          + linear ae k=6       1.525        0.00091      14
+  + nonlinear ae h=32 k=6      0.2614        0.00065     566
+  + nonlinear ae h=64 k=6      0.1763        0.00051     406
+ + nonlinear ae h=128 k=6      0.1514        0.00051     421
+                + pca k=8       3.239        0.00067        
+          + linear ae k=8      0.6205        0.00071      14
+  + nonlinear ae h=32 k=8     0.07931        0.00523     422
+  + nonlinear ae h=64 k=8     0.04064        0.00075     361
+ + nonlinear ae h=128 k=8     0.02945        0.00090     298
+               + pca k=10       2.073        0.00137        
+         + linear ae k=10       0.252        0.00140      37
+ + nonlinear ae h=32 k=10     0.02969        0.00059     557
+ + nonlinear ae h=64 k=10     0.01706        0.00063     494
++ nonlinear ae h=128 k=10     0.01142        0.00062     545
+               + pca k=12       1.416        0.01446        
+         + linear ae k=12      0.1178        0.01436      34
+ + nonlinear ae h=32 k=12    0.008113        0.00062     465
+ + nonlinear ae h=64 k=12    0.003932        0.00061     481
++ nonlinear ae h=128 k=12     0.00204        0.00080     494
+               + pca k=14      0.6291        0.00096        
+         + linear ae k=14     0.02308        0.00099      50
+ + nonlinear ae h=32 k=14    0.000349        0.00131     298
+ + nonlinear ae h=64 k=14   0.0002458        0.00184     235
++ nonlinear ae h=128 k=14     0.00016        0.00094     197
+               + pca k=16     0.02591        0.00075        
+         + linear ae k=16   3.964e-05        0.00076      72
+ + nonlinear ae h=32 k=16   0.0001427        0.00118     139
+ + nonlinear ae h=64 k=16    0.000159        0.00120      94
++ nonlinear ae h=128 k=16   0.0001497        0.00136      84
+
+                 detector    found in 1  found in 10     alarms/h 1   alarms/h 10
+                    rules       448/862      373/862           34.4           0.2
+                + pca k=2       450/862      374/862           39.8           0.9
+          + linear ae k=2       450/862      374/862           39.7           0.9
+  + nonlinear ae h=32 k=2       472/862      387/862           46.7           1.0
+  + nonlinear ae h=64 k=2       474/862      393/862           43.8           0.6
+ + nonlinear ae h=128 k=2       485/862      392/862           49.0           1.0
+                + pca k=4       452/862      374/862           37.3           0.2
+          + linear ae k=4       452/862      374/862           37.1           0.2
+  + nonlinear ae h=32 k=4       531/862      426/862           46.9           0.4
+  + nonlinear ae h=64 k=4       535/862      440/862           50.3           0.5
+ + nonlinear ae h=128 k=4       555/862      454/862           53.4           0.3
+                + pca k=6       458/862      380/862           44.9           0.4
+          + linear ae k=6       458/862      380/862           45.1           0.4
+  + nonlinear ae h=32 k=6       589/862      478/862           44.5           0.3
+  + nonlinear ae h=64 k=6       630/862      527/862           44.9           0.2
+ + nonlinear ae h=128 k=6       629/862      537/862           44.9           0.2
+                + pca k=8       496/862      414/862           39.7           0.8
+          + linear ae k=8       496/862      414/862           40.1           0.9
+  + nonlinear ae h=32 k=8       640/862      547/862           45.4           2.0
+  + nonlinear ae h=64 k=8       727/862      640/862           48.8           0.4
+ + nonlinear ae h=128 k=8       727/862      647/862           52.5           0.5
+               + pca k=10       570/862      464/862           46.7           1.0
+         + linear ae k=10       571/862      464/862           47.3           1.0
+ + nonlinear ae h=32 k=10       678/862      578/862           47.4           0.2
+ + nonlinear ae h=64 k=10       676/862      579/862           50.3           0.2
++ nonlinear ae h=128 k=10       706/862      624/862           49.7           0.2
+               + pca k=12       646/862      544/862           56.0           6.2
+         + linear ae k=12       646/862      545/862           55.3           6.1
+ + nonlinear ae h=32 k=12       631/862      539/862           52.9           0.2
+ + nonlinear ae h=64 k=12       699/862      596/862           51.9           0.2
++ nonlinear ae h=128 k=12       690/862      595/862           51.4           0.5
+               + pca k=14       636/862      534/862           46.7           0.9
+         + linear ae k=14       635/862      537/862           47.1           0.8
+ + nonlinear ae h=32 k=14       679/862      554/862           55.3           0.7
+ + nonlinear ae h=64 k=14       723/862      635/862           64.9           1.1
++ nonlinear ae h=128 k=14       720/862      630/862           58.8           0.3
+               + pca k=16       458/862      374/862           58.4           0.2
+         + linear ae k=16       458/862      374/862           58.4           0.2
+ + nonlinear ae h=32 k=16       681/862      572/862           63.8           0.2
+ + nonlinear ae h=64 k=16       738/862      647/862           61.9           0.3
++ nonlinear ae h=128 k=16       679/862      552/862           65.2           0.3
+    23227.66 real     22985.69 user       979.34 sys
+          5024874496  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             7668379  page reclaims
+                 569  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                  25  messages sent
+                  31  messages received
+                   0  signals received
+                3228  voluntary context switches
+           429760289  involuntary context switches
+     404732335060327  instructions retired
+      93270537988487  cycles elapsed
+          6221829304  peak memory footprint
